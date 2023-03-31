@@ -1,0 +1,139 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap : 20px;
+    background-color: gainsboro;
+}
+
+.game{
+    display: grid;
+    grid-template-columns: repeat(3,150px);
+    grid-template-rows: 1fr 1fr 1fr;
+    flex:1;
+    border-radius: 20px;
+    margin-bottom: 50px;
+}
+
+
+.scores {
+    background-color: white;
+    border: 3px solid purple;
+    padding: 15px 35px;
+    border-radius: 10px;
+}
+
+.scores .first{
+    padding-bottom: 25%;
+    border-bottom: 1px solid grey;
+}
+
+.cell{
+    transition: background-color ease-in-out 0.3s;
+    font-size: 1.55rem;
+    background-color: white;
+    border: 1px solid black;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    margin: 2px;
+}
+
+
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: white;
+    width: 500px;
+    max-width: 80%;
+  }
+  
+  .modal.active {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  #overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+  }
+  
+  #overlay.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .modal-header {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+  }
+  
+  .modal-header .title {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .modal-header .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+
+  .modal-body {
+    padding: 10px 15px;
+  }
+
+
+  form{
+    display: flex;
+    flex-direction: column;
+    gap:12px;
+  }
+  form div{
+    display:flex;
+    gap: 20px;
+  }
+  input{
+    border: 1px solid black;
+    border-radius: 4px;
+    width: 60%;
+    padding: 5px;;
+  }
+form button{
+    width : 100px;
+    background-color: cornflowerblue;
+    color: whitesmoke;
+    border: none;
+    height: 30px;
+    border-radius: 1rem;
+}
+form button:hover{
+    background-color: black;
+}
+.buttons-form{
+    margin-top: 20px;
+    align-items: center;
+    align-self: center;
+}
